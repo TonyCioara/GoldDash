@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		488B7F6A2048ADA70003D7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B7F692048ADA70003D7EB /* AppDelegate.swift */; };
+		488B7F6C2048ADA70003D7EB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 488B7F6B2048ADA70003D7EB /* GameScene.sks */; };
+		488B7F6E2048ADA70003D7EB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 488B7F6D2048ADA70003D7EB /* Actions.sks */; };
+		488B7F702048ADA70003D7EB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B7F6F2048ADA70003D7EB /* GameScene.swift */; };
+		488B7F722048ADA70003D7EB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B7F712048ADA70003D7EB /* GameViewController.swift */; };
+		488B7F752048ADA70003D7EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488B7F732048ADA70003D7EB /* Main.storyboard */; };
+		488B7F772048ADA70003D7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488B7F762048ADA70003D7EB /* Assets.xcassets */; };
+		488B7F7A2048ADA70003D7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488B7F782048ADA70003D7EB /* LaunchScreen.storyboard */; };
+		488B7F852048ADA70003D7EB /* GoldDashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B7F842048ADA70003D7EB /* GoldDashTests.swift */; };
+		488B7F902048ADA70003D7EB /* GoldDashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B7F8F2048ADA70003D7EB /* GoldDashUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		488B7F812048ADA70003D7EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 488B7F5E2048ADA70003D7EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 488B7F652048ADA70003D7EB;
+			remoteInfo = GoldDash;
+		};
+		488B7F8C2048ADA70003D7EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 488B7F5E2048ADA70003D7EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 488B7F652048ADA70003D7EB;
+			remoteInfo = GoldDash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		488B7F662048ADA70003D7EB /* GoldDash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldDash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		488B7F692048ADA70003D7EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		488B7F6B2048ADA70003D7EB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		488B7F6D2048ADA70003D7EB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		488B7F6F2048ADA70003D7EB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		488B7F712048ADA70003D7EB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		488B7F742048ADA70003D7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		488B7F762048ADA70003D7EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		488B7F792048ADA70003D7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		488B7F7B2048ADA70003D7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		488B7F802048ADA70003D7EB /* GoldDashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldDashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		488B7F842048ADA70003D7EB /* GoldDashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldDashTests.swift; sourceTree = "<group>"; };
+		488B7F862048ADA70003D7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		488B7F8B2048ADA70003D7EB /* GoldDashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldDashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		488B7F8F2048ADA70003D7EB /* GoldDashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldDashUITests.swift; sourceTree = "<group>"; };
+		488B7F912048ADA70003D7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		488B7F632048ADA70003D7EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		488B7F7D2048ADA70003D7EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		488B7F882048ADA70003D7EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		488B7F5D2048ADA70003D7EB = {
+			isa = PBXGroup;
+			children = (
+				488B7F682048ADA70003D7EB /* GoldDash */,
+				488B7F832048ADA70003D7EB /* GoldDashTests */,
+				488B7F8E2048ADA70003D7EB /* GoldDashUITests */,
+				488B7F672048ADA70003D7EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		488B7F672048ADA70003D7EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				488B7F662048ADA70003D7EB /* GoldDash.app */,
+				488B7F802048ADA70003D7EB /* GoldDashTests.xctest */,
+				488B7F8B2048ADA70003D7EB /* GoldDashUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		488B7F682048ADA70003D7EB /* GoldDash */ = {
+			isa = PBXGroup;
+			children = (
+				488B7F692048ADA70003D7EB /* AppDelegate.swift */,
+				488B7F6B2048ADA70003D7EB /* GameScene.sks */,
+				488B7F6D2048ADA70003D7EB /* Actions.sks */,
+				488B7F6F2048ADA70003D7EB /* GameScene.swift */,
+				488B7F712048ADA70003D7EB /* GameViewController.swift */,
+				488B7F732048ADA70003D7EB /* Main.storyboard */,
+				488B7F762048ADA70003D7EB /* Assets.xcassets */,
+				488B7F782048ADA70003D7EB /* LaunchScreen.storyboard */,
+				488B7F7B2048ADA70003D7EB /* Info.plist */,
+			);
+			path = GoldDash;
+			sourceTree = "<group>";
+		};
+		488B7F832048ADA70003D7EB /* GoldDashTests */ = {
+			isa = PBXGroup;
+			children = (
+				488B7F842048ADA70003D7EB /* GoldDashTests.swift */,
+				488B7F862048ADA70003D7EB /* Info.plist */,
+			);
+			path = GoldDashTests;
+			sourceTree = "<group>";
+		};
+		488B7F8E2048ADA70003D7EB /* GoldDashUITests */ = {
+			isa = PBXGroup;
+			children = (
+				488B7F8F2048ADA70003D7EB /* GoldDashUITests.swift */,
+				488B7F912048ADA70003D7EB /* Info.plist */,
+			);
+			path = GoldDashUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		488B7F652048ADA70003D7EB /* GoldDash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 488B7F942048ADA70003D7EB /* Build configuration list for PBXNativeTarget "GoldDash" */;
+			buildPhases = (
+				488B7F622048ADA70003D7EB /* Sources */,
+				488B7F632048ADA70003D7EB /* Frameworks */,
+				488B7F642048ADA70003D7EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldDash;
+			productName = GoldDash;
+			productReference = 488B7F662048ADA70003D7EB /* GoldDash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		488B7F7F2048ADA70003D7EB /* GoldDashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 488B7F972048ADA70003D7EB /* Build configuration list for PBXNativeTarget "GoldDashTests" */;
+			buildPhases = (
+				488B7F7C2048ADA70003D7EB /* Sources */,
+				488B7F7D2048ADA70003D7EB /* Frameworks */,
+				488B7F7E2048ADA70003D7EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				488B7F822048ADA70003D7EB /* PBXTargetDependency */,
+			);
+			name = GoldDashTests;
+			productName = GoldDashTests;
+			productReference = 488B7F802048ADA70003D7EB /* GoldDashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		488B7F8A2048ADA70003D7EB /* GoldDashUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 488B7F9A2048ADA70003D7EB /* Build configuration list for PBXNativeTarget "GoldDashUITests" */;
+			buildPhases = (
+				488B7F872048ADA70003D7EB /* Sources */,
+				488B7F882048ADA70003D7EB /* Frameworks */,
+				488B7F892048ADA70003D7EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				488B7F8D2048ADA70003D7EB /* PBXTargetDependency */,
+			);
+			name = GoldDashUITests;
+			productName = GoldDashUITests;
+			productReference = 488B7F8B2048ADA70003D7EB /* GoldDashUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		488B7F5E2048ADA70003D7EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Tony Cioara";
+				TargetAttributes = {
+					488B7F652048ADA70003D7EB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					488B7F7F2048ADA70003D7EB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 488B7F652048ADA70003D7EB;
+					};
+					488B7F8A2048ADA70003D7EB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 488B7F652048ADA70003D7EB;
+					};
+				};
+			};
+			buildConfigurationList = 488B7F612048ADA70003D7EB /* Build configuration list for PBXProject "GoldDash" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 488B7F5D2048ADA70003D7EB;
+			productRefGroup = 488B7F672048ADA70003D7EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				488B7F652048ADA70003D7EB /* GoldDash */,
+				488B7F7F2048ADA70003D7EB /* GoldDashTests */,
+				488B7F8A2048ADA70003D7EB /* GoldDashUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		488B7F642048ADA70003D7EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				488B7F752048ADA70003D7EB /* Main.storyboard in Resources */,
+				488B7F6C2048ADA70003D7EB /* GameScene.sks in Resources */,
+				488B7F772048ADA70003D7EB /* Assets.xcassets in Resources */,
+				488B7F7A2048ADA70003D7EB /* LaunchScreen.storyboard in Resources */,
+				488B7F6E2048ADA70003D7EB /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		488B7F7E2048ADA70003D7EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		488B7F892048ADA70003D7EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		488B7F622048ADA70003D7EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				488B7F702048ADA70003D7EB /* GameScene.swift in Sources */,
+				488B7F722048ADA70003D7EB /* GameViewController.swift in Sources */,
+				488B7F6A2048ADA70003D7EB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		488B7F7C2048ADA70003D7EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				488B7F852048ADA70003D7EB /* GoldDashTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		488B7F872048ADA70003D7EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				488B7F902048ADA70003D7EB /* GoldDashUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		488B7F822048ADA70003D7EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 488B7F652048ADA70003D7EB /* GoldDash */;
+			targetProxy = 488B7F812048ADA70003D7EB /* PBXContainerItemProxy */;
+		};
+		488B7F8D2048ADA70003D7EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 488B7F652048ADA70003D7EB /* GoldDash */;
+			targetProxy = 488B7F8C2048ADA70003D7EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		488B7F732048ADA70003D7EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				488B7F742048ADA70003D7EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		488B7F782048ADA70003D7EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				488B7F792048ADA70003D7EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		488B7F922048ADA70003D7EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		488B7F932048ADA70003D7EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		488B7F952048ADA70003D7EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDYWQEVARC;
+				INFOPLIST_FILE = GoldDash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TonyCioara.GoldDash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		488B7F962048ADA70003D7EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDYWQEVARC;
+				INFOPLIST_FILE = GoldDash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TonyCioara.GoldDash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		488B7F982048ADA70003D7EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDYWQEVARC;
+				INFOPLIST_FILE = GoldDashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TonyCioara.GoldDashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldDash.app/GoldDash";
+			};
+			name = Debug;
+		};
+		488B7F992048ADA70003D7EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDYWQEVARC;
+				INFOPLIST_FILE = GoldDashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TonyCioara.GoldDashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldDash.app/GoldDash";
+			};
+			name = Release;
+		};
+		488B7F9B2048ADA70003D7EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDYWQEVARC;
+				INFOPLIST_FILE = GoldDashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TonyCioara.GoldDashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoldDash;
+			};
+			name = Debug;
+		};
+		488B7F9C2048ADA70003D7EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDYWQEVARC;
+				INFOPLIST_FILE = GoldDashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TonyCioara.GoldDashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoldDash;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		488B7F612048ADA70003D7EB /* Build configuration list for PBXProject "GoldDash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				488B7F922048ADA70003D7EB /* Debug */,
+				488B7F932048ADA70003D7EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		488B7F942048ADA70003D7EB /* Build configuration list for PBXNativeTarget "GoldDash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				488B7F952048ADA70003D7EB /* Debug */,
+				488B7F962048ADA70003D7EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		488B7F972048ADA70003D7EB /* Build configuration list for PBXNativeTarget "GoldDashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				488B7F982048ADA70003D7EB /* Debug */,
+				488B7F992048ADA70003D7EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		488B7F9A2048ADA70003D7EB /* Build configuration list for PBXNativeTarget "GoldDashUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				488B7F9B2048ADA70003D7EB /* Debug */,
+				488B7F9C2048ADA70003D7EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 488B7F5E2048ADA70003D7EB /* Project object */;
+}
