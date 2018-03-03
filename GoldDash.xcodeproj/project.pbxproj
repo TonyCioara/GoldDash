@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4855BE302049D98200F1EC2E /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4855BE2F2049D98200F1EC2E /* Tile.swift */; };
+		4855BE322049E3D600F1EC2E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4855BE312049E3D600F1EC2E /* Player.swift */; };
 		488B7F6A2048ADA70003D7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B7F692048ADA70003D7EB /* AppDelegate.swift */; };
 		488B7F6C2048ADA70003D7EB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 488B7F6B2048ADA70003D7EB /* GameScene.sks */; };
 		488B7F6E2048ADA70003D7EB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 488B7F6D2048ADA70003D7EB /* Actions.sks */; };
@@ -17,6 +19,8 @@
 		488B7F7A2048ADA70003D7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488B7F782048ADA70003D7EB /* LaunchScreen.storyboard */; };
 		488B7F852048ADA70003D7EB /* GoldDashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B7F842048ADA70003D7EB /* GoldDashTests.swift */; };
 		488B7F902048ADA70003D7EB /* GoldDashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B7F8F2048ADA70003D7EB /* GoldDashUITests.swift */; };
+		48C0BDCD204A1D8500C51D21 /* BuildMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 48C0BDCC204A1D8500C51D21 /* BuildMap.sks */; };
+		48C0BDCF204A1D9B00C51D21 /* BuildMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C0BDCE204A1D9B00C51D21 /* BuildMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4855BE2F2049D98200F1EC2E /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		4855BE312049E3D600F1EC2E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		488B7F662048ADA70003D7EB /* GoldDash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldDash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		488B7F692048ADA70003D7EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		488B7F6B2048ADA70003D7EB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -53,6 +59,8 @@
 		488B7F8B2048ADA70003D7EB /* GoldDashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldDashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		488B7F8F2048ADA70003D7EB /* GoldDashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldDashUITests.swift; sourceTree = "<group>"; };
 		488B7F912048ADA70003D7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C0BDCC204A1D8500C51D21 /* BuildMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BuildMap.sks; sourceTree = "<group>"; };
+		48C0BDCE204A1D9B00C51D21 /* BuildMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +113,12 @@
 			children = (
 				488B7F692048ADA70003D7EB /* AppDelegate.swift */,
 				488B7F6B2048ADA70003D7EB /* GameScene.sks */,
-				488B7F6D2048ADA70003D7EB /* Actions.sks */,
 				488B7F6F2048ADA70003D7EB /* GameScene.swift */,
+				48C0BDCC204A1D8500C51D21 /* BuildMap.sks */,
+				48C0BDCE204A1D9B00C51D21 /* BuildMap.swift */,
+				488B7F6D2048ADA70003D7EB /* Actions.sks */,
+				4855BE312049E3D600F1EC2E /* Player.swift */,
+				4855BE2F2049D98200F1EC2E /* Tile.swift */,
 				488B7F712048ADA70003D7EB /* GameViewController.swift */,
 				488B7F732048ADA70003D7EB /* Main.storyboard */,
 				488B7F762048ADA70003D7EB /* Assets.xcassets */,
@@ -244,6 +256,7 @@
 				488B7F752048ADA70003D7EB /* Main.storyboard in Resources */,
 				488B7F6C2048ADA70003D7EB /* GameScene.sks in Resources */,
 				488B7F772048ADA70003D7EB /* Assets.xcassets in Resources */,
+				48C0BDCD204A1D8500C51D21 /* BuildMap.sks in Resources */,
 				488B7F7A2048ADA70003D7EB /* LaunchScreen.storyboard in Resources */,
 				488B7F6E2048ADA70003D7EB /* Actions.sks in Resources */,
 			);
@@ -273,6 +286,9 @@
 				488B7F702048ADA70003D7EB /* GameScene.swift in Sources */,
 				488B7F722048ADA70003D7EB /* GameViewController.swift in Sources */,
 				488B7F6A2048ADA70003D7EB /* AppDelegate.swift in Sources */,
+				48C0BDCF204A1D9B00C51D21 /* BuildMap.swift in Sources */,
+				4855BE322049E3D600F1EC2E /* Player.swift in Sources */,
+				4855BE302049D98200F1EC2E /* Tile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

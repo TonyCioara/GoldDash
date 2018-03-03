@@ -11,79 +11,156 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    var player: Player!
+    var mapNode: SKNode!
+    var currentTile: TileTypes!
+    var mapArray = [Array<Int>]()
     
     override func didMove(to view: SKView) {
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
+//        Initialize Sprites
+        mapNode = childNode(withName: "mapNode") as! SKNode
+        player = childNode(withName: "player") as! Player
+        
+//        Generate map
+        generateRandomMapArray()
+        generateMapWithArray()
+        
+//        Set currentTile
+        currentTile = TileTypes(rawValue: mapArray[0][0])
+        
+//        Initialize swipe gesture recognizers
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.right
+        self.view?.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        self.view?.addGestureRecognizer(swipeLeft)
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.up
+        self.view?.addGestureRecognizer(swipeUp)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeDown.direction = UISwipeGestureRecognizerDirection.down
+        self.view?.addGestureRecognizer(swipeDown)
+    }
+    
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.right:
+                swipeRight()
+            case UISwipeGestureRecognizerDirection.left:
+                swipeLeft()
+            case UISwipeGestureRecognizerDirection.down:
+                swipeDown()
+            case UISwipeGestureRecognizerDirection.up:
+                swipeUp()
+            default:
+                break
+            }
+        }
+    }
+    
+    func updateCurrentTile () {
+        let currentTileNumber = mapArray[player.yCoord][player.xCoord]
+        currentTile = TileTypes(rawValue: currentTileNumber)!
+    }
+    
+    func moveMap(x: Int, y: Int, amplifier: Int = 1) {
+        let moveAction = SKAction.moveBy(x: CGFloat(x * amplifier), y: CGFloat(y * amplifier), duration: 0.05 * Double(amplifier))
+        mapNode.run(moveAction)
+    }
+    
+    func calculateMoveAmplifier() -> Int {
+        var amplifier = 1
+        switch currentTile! {
+        case .wheatTile:
+            amplifier = 2
+        default:
+            break
+        }
+        return amplifier
+    }
+    
+    func swipeRight() {
+//        Move player Right
+        let amplifier = calculateMoveAmplifier()
+        moveMap(x: -100, y: 0, amplifier: amplifier)
+        player.move(direction: .right, withAmplifier: amplifier)
+        updateCurrentTile ()
+    }
+    
+    func swipeLeft() {
+//        Move player Left
+        let amplifier = calculateMoveAmplifier()
+        moveMap(x: 100, y: 0, amplifier: amplifier)
+        player.move(direction: .left, withAmplifier: amplifier)
+        updateCurrentTile ()
+    }
+    
+    func swipeUp() {
+//        Move player Up
+        let amplifier = calculateMoveAmplifier()
+        moveMap(x: -50, y: -65, amplifier: amplifier)
+        player.move(direction: .up, withAmplifier: amplifier)
+        updateCurrentTile ()
+    }
+    
+    func swipeDown() {
+//        Move player Down
+        let amplifier = calculateMoveAmplifier()
+        moveMap(x: 50, y: 65, amplifier: amplifier)
+        player.move(direction: .down, withAmplifier: amplifier)
+        updateCurrentTile ()
+    }
+    
+    //    MARK: Map Generation
+    
+    func generateTile(tileType: Int, xCoord: Int, yCoord: Int) {
+        let yOffset = 0
+        let xOffset = 0
+        let newTile = Tile(tileNumber: tileType)
+        newTile.position.x = CGFloat(
+            Int(self.player.position.x) +
+            xOffset +
+            xCoord * 100 +
+            yCoord * 50
+        )
+        newTile.position.y = CGFloat(
+            Int(self.player.position.y) +
+            yOffset +
+            yCoord * 65
+        )
+        newTile.zPosition = CGFloat(xCoord - yCoord)
+        if tileType == 2 {
+            newTile.anchorPoint = CGPoint(x: 0.5, y: 0.25)
+        }
+        self.mapNode.addChild(newTile)
+    }
+    
+    func generateMapWithArray() {
+        for row in 0 ..< self.mapArray.count {
+            let innerArray = self.mapArray[row]
+            for col in 0 ..< innerArray.count {
+                generateTile(tileType: innerArray[col], xCoord: col, yCoord: row)
+            }
+        }
+    }
+    
+    func generateRandomMapArray() {
+        for _ in 1 ... 20 {
+            var innerArray = [Int]()
+            for _ in 1 ... 20 {
+                let rand = arc4random_uniform(2)
+                innerArray.append(Int(rand))
+            }
+        self.mapArray.append(innerArray)
         }
         
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
-    }
-    
-    
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-        }
-        
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+//        Add winTile
+        self.mapArray[18][18] = 2
     }
 }
